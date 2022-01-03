@@ -9,6 +9,7 @@ import "./App.css";
 
 function App() {
   const [completeData, setCompleteData] = useState([]);
+  const [countrySelected, setSelectedCountry] = useState("");
 
   useEffect(() => {
     async function fetchAPI() {
@@ -19,10 +20,17 @@ function App() {
     fetchAPI();
   }, []);
 
+  const countryChangeHandler = async (country) => {
+    const fetchedCountryData = await fetchData(country);
+    setCompleteData(fetchedCountryData);
+    setSelectedCountry(country);
+  };
+
   return (
     <div className="container">
       <Cards data={completeData} />
-      <Charts />
+      <CountryPicker CountryChangeHandler={countryChangeHandler} />
+      <Charts data={completeData} country={countrySelected} />
     </div>
   );
 }
