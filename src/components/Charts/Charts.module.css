@@ -5,6 +5,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 60%;
+  max-width: 1200px;
+  width: 100%;
 }
 /*# sourceMappingURL=Charts.module.css.map */

@@ -6,6 +6,7 @@ export const fetchData = async (countrySelected) => {
   let dynamicUrl = url;
 
   if (countrySelected) {
+    console.log(countrySelected);
     dynamicUrl = `${url}/countries/${countrySelected}`;
   }
 

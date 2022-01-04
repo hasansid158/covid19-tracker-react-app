@@ -24,7 +24,7 @@ export default function CountryPicker({ CountryChangeHandler }) {
         defaultValue="world"
         id="select-country"
         onChange={(e) => {
-          CountryChangeHandler(e.target.value);
+          CountryChangeHandler(e.target.value != "world" ? e.target.value : "");
         }}
       >
         <option value="world">World</option>

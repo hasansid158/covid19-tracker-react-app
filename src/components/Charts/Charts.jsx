@@ -40,6 +40,18 @@ export default function Charts({
           },
         ],
       }}
+      options={{
+        scales: {
+          xAxes: [
+            {
+              display: true,
+              ticks: {
+                beginAtZero: false,
+              },
+            },
+          ],
+        },
+      }}
     />
   );
 

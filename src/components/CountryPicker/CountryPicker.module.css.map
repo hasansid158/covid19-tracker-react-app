@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACX,KAAK,EAAE,GAAG;EACV,aAAa,EAAE,eAAe;CAC/B",
     "sources": [
         "CountryPicker.module.scss"
     ],

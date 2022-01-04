@@ -10,7 +10,12 @@ export default function Cards({
 }) {
   return (
     <div className={styles.container}>
-      <Grid container spacing={3} justifyContent="center">
+      <Grid
+        container
+        spacing={3}
+        justifyContent="center"
+        className={styles["card-container"]}
+      >
         <Grid
           item
           component={Card}

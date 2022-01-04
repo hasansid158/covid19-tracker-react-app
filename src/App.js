@@ -3,6 +3,7 @@ import Charts from "./components/Charts/Charts";
 import CountryPicker from "./components/CountryPicker/CountryPicker";
 import { fetchData } from "./api";
 import { useEffect, useState } from "react";
+import covidImage from "./images/image.png";
 
 //styles
 import "./App.css";
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <div className="container">
+      <img src={covidImage} className="covidImage" alt="Covid-19 Image" />
       <Cards data={completeData} />
       <CountryPicker CountryChangeHandler={countryChangeHandler} />
       <Charts data={completeData} country={countrySelected} />
