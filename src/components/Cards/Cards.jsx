@@ -55,13 +55,16 @@ export default function Cards({
               Recovered
             </Typography>
             <Typography variant="h5">
-              {" "}
-              <CountUp
-                start={0}
-                end={recovered && recovered.value}
-                duration={2.5}
-                separator=","
-              />
+              {recovered.value <= 0 ? (
+                "Data Unavailable"
+              ) : (
+                <CountUp
+                  start={0}
+                  end={recovered && recovered.value}
+                  duration={2.5}
+                  separator=","
+                />
+              )}
             </Typography>
             <Typography color="textSecondary">
               {lastUpdate && new Date(lastUpdate).toDateString()}
@@ -83,7 +86,6 @@ export default function Cards({
               Deaths
             </Typography>
             <Typography variant="h5">
-              {" "}
               <CountUp
                 start={0}
                 end={deaths && deaths.value}

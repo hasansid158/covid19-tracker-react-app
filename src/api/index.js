@@ -30,7 +30,7 @@ export const fetchDailyData = async () => {
   try {
     const { data } = await axios.get(url + "/daily");
 
-    const filteredData = data.splice(data.length - 50);
+    const filteredData = data.splice(data.length - 80);
 
     return filteredData;
   } catch (error) {
