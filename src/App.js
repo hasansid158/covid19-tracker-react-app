@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="container">
-      <img src={covidImage} className="covidImage" alt="Covid-19 Image" />
+      <img src={covidImage} className="covidImage" alt="Covid-19" />
       <Cards data={completeData} />
       <CountryPicker CountryChangeHandler={countryChangeHandler} />
       <Charts data={completeData} country={countrySelected} />
