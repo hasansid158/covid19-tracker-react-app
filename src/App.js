@@ -23,6 +23,7 @@ function App() {
 
   const countryChangeHandler = async (country) => {
     const fetchedCountryData = await fetchData(country);
+    console.log(fetchedCountryData);
     setCompleteData(fetchedCountryData);
     setSelectedCountry(country);
   };

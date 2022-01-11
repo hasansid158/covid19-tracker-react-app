@@ -55,7 +55,7 @@ export default function Cards({
               Recovered
             </Typography>
             <Typography variant="h5">
-              {recovered.value <= 0 ? (
+              {recovered && recovered.value <= 0 ? (
                 "Data Unavailable"
               ) : (
                 <CountUp
